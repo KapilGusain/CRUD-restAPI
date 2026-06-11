@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Edit Student</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-8 rounded-xl shadow-lg w-[450px]">
+
+    <h1 class="text-3xl font-bold mb-6">
+        Edit Student
+    </h1>
+
+    <form action="/edit/<%= student._id %>" method="POST">
+
+        <div class="mb-4">
+            <label>Name</label>
+
+            <input
+                type="text"
+                name="name"
+                value="<%= student.name %>"
+                class="w-full border p-2 rounded"
+            >
+        </div>
+
+        <div class="mb-4">
+            <label>Nickname</label>
+
+            <input
+                type="text"
+                name="nickname"
+                value="<%= student.nickname %>"
+                class="w-full border p-2 rounded"
+            >
+        </div>
+
+        <div class="mb-4">
+            <label>Score</label>
+
+            <input
+                type="number"
+                name="score"
+                value="<%= student.score %>"
+                class="w-full border p-2 rounded"
+            >
+        </div>
+
+        <button
+            type="submit"
+            class="bg-blue-600 text-white px-5 py-2 rounded"
+        >
+            Update Student
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
